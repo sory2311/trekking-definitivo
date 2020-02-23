@@ -1,0 +1,45 @@
+//Mixins Only Desktop - Mobile //
+
+//Desktop//
+@media (min-width:0px) and (max-width: 600px){}
+
+//Mobile//
+@media only screen and (min-width: 1200px){}
+
+//Mixins All Sizes//
+
+// Extra small devices (phones, 600px and down) //
+@media (min-width:0px) and (max-width: 600px){}
+
+// Small devices (portrait tablets and large phones, 600px and 767px) //
+@media (min-width: 601px) and (max-width:767px){}
+
+/* Medium devices (landscape tablets, 768px and 991px) */
+@media (min-width: 768px) and (max-width:991px){}
+
+/* Large devices (laptops/desktops, 992px and 1199px) */
+@media  (min-width: 992px) and (max-width:1199px){}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){}
+
+
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

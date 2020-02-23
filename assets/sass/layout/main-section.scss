@@ -1,0 +1,170 @@
+.grafico__grafico {
+    width: 100%;
+
+}
+
+.grafico {
+    padding: 0 22%;
+}
+
+.grafico__titulo {
+    text-align: center;
+    font-family: $raleway;
+    font-weight: $bold;
+    font-size: $x-large;
+}
+
+.grafico__text__titulo {
+    font-family: $raleway;
+    font-weight: $bold;
+    font-size: $large;
+}
+@media only screen and (min-width: 700px) {
+.grafico__div{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+.grafico__text,
+    .grafico__grafico {
+        display: inline-block;
+    }
+
+.grafico__text__parrafo{
+  margin-top: 23px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 320px) {
+  .grafico {
+      padding: 0 5px;
+  }
+  .grafico__text__parrafo{
+    margin-top: 23px;
+    text-align: left;
+    padding-right: 40px;
+    padding-bottom: 50px;
+  }
+}
+//a-bar//
+
+ .bar-graph{
+  -webkit-animation: mover 1s ease-in 3 alternate forwards;
+   animation: mover 3s ease-in 10 alternate forwards;
+ }
+
+@keyframes mover {
+0% { margin-left: 0;}
+50% { color: red; }
+75% { opacity: 0.5; }
+100% { margin-left: 10em; opacity: 0;}
+}
+
+// seccion precio//
+
+// section precios mobile
+.precios__title {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.precios__background {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.precios__h2 {
+  margin-top: -3em;
+  font-family: $raleway;
+  font-size: $x-large;
+  font-weight: $bold;
+  text-align: center;
+  color: $white;
+
+}
+
+.container__cards {
+  position: relative;
+  padding: 1.5em;
+  background-color: $onix;
+}
+
+.precios__card {
+  background-color: $white;
+  padding: 0em 1.5em 0 1.5em;
+  border: 1px solid $silver-chalice;
+  margin-bottom: 3em;
+}
+
+.precios__body__h4 {
+  font-size: $large;
+  font-weight: $regular;
+  margin-bottom: 0;
+}
+
+.precios__body__p {
+  font-family: $raleway;
+  font-size: $x-large;
+  font-weight: $bold;
+  margin: 0 0 .5em 0;
+}
+
+.precios__list {
+  padding-left: 2em;
+  line-height: 1.8;
+}
+
+.precios__item {
+  padding-left: .5em;
+}
+
+.precios__free {
+  padding-bottom: 5.4em;
+}
+hr {
+  color: $gray;
+  border-style: ridge;
+}
+.precios__button {
+  font-size: $medium;
+  margin: .5em 0 1.5em 0;
+  width: 100%;
+  height: 2.5em;
+  color: $white;
+  background-color: $ball-blue;
+  border-style: none;
+}
+// fin section precios mobile
+
+// section precios desktop
+@media only screen and (min-width: 700px) {
+
+  .precios__h2 {
+    margin-top: -14em;
+    font-size: $xxxx-large;
+  }
+
+  .container__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .precios__card {
+    margin: 0 3em 2em 3em;
+  }
+
+  .precios__body__h4 {
+    font-size: $x-large;
+  }
+
+  .precios__body__p {
+    font-size: $x-large;
+  }
+}

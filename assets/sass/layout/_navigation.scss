@@ -1,0 +1,127 @@
+.navigation{
+position: relative;
+}
+
+.navigation__logo {
+position: absolute;
+top: .9em;
+left: 2.5em;
+}
+
+.collapsible {
+  text-align: right;
+  label {
+    display: block;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: 1em;
+    font-size: 1.8rem;
+  }
+}
+
+#menu {
+  display: none;
+}
+
+input:checked ~ .navigation__container {
+  max-height: 100%;
+}
+
+.navigation__container {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation__list {
+  list-style: none;
+}
+.navigation__item {
+  a {
+    display: block;
+    text-align: left;
+    padding: .5em;
+    font-family: $open-sans;
+    font-size: $medium;
+    font-weight: $regular;
+    color: $nickel;
+    text-decoration: none;
+    &:hover {
+      color: $silver-chalice;
+    }
+  }
+}
+//
+
+.navigation__button {
+  text-align: center;
+  font-family: $open-sans;
+  font-size: $medium;
+  font-weight: $regular;
+}
+
+.navigation__button1 {
+  margin-right: .5em;
+  margin-bottom: .5em;
+  padding: .5em;
+  color: $raising-black;
+  border: none;
+  background-color: transparent;
+    &:hover {
+      color: $silver-chalice;
+      background-color: $raising-black;
+    }
+}
+
+.navigation__button2 {
+  margin-right: .5em;
+  margin-bottom: .5em;
+  padding: .5em;
+  color: $white;
+  background-color: $ball-blue;
+  border-style: none;
+  &:hover {
+    background-color: $middle-blue;
+  }
+}
+
+
+// desktop
+@media only screen and (min-width: 700px) {
+  .navigation__logo {
+    top: 1em;
+    left: 3em;
+  }
+  .collapsible {
+    label {
+      display: none;
+    }
+  }
+  .navigation__container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 100%;
+    padding: .5em 3em .5em 0;
+    overflow: visible;
+  }
+  .navigation__list {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5em;;
+    padding: inherit;
+  }
+  .navigation__item {
+    a {
+      padding: .5em 1em;
+      font-size: 1rem;
+      font-weight: $regular;
+    }
+  }
+
+  .navigation__button {
+    padding: .5em 1em;
+    font-size: 1rem;
+    font-weight: $regular;
+  }
+
+}

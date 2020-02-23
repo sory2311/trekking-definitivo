@@ -1,0 +1,47 @@
+//Color Fonts//
+$dark-salmon: #ee9480;
+$melon: #f4baae;
+$pale-pink:#fadfda;
+$white: #fff;
+$platinum: #e8e8e8;
+$gray: #bababa;
+$ball-blue:#2ab7ca;
+$middle-blue: #77d1dd;
+$blue-lagoon: #b1e4eb;
+$onix: #333745;
+$spanish-gray:#8f9199;
+$lavender-gray:#c7c8cc;
+$raising-black: #221d23;
+$nickel: #726f73;
+$silver-chalice: #aeacaf;
+
+
+// TYPOGRAPHY
+// font family
+$open-sans: 'Open Sans', sans-serif;
+$raleway: 'Raleway', sans-serif;
+
+// font weight
+$regular: 400;
+$bold: 700;
+
+
+//Variables Font Family//
+
+$xxxxx-large: 50px;
+$xxxx-large: 45px;
+$xxx-large: 40px;
+$xx-large: 35px;
+$x-large: 30px;
+$large: 20px;
+$medium: 16px;
+$small: 14px;
+$x-small: 12px;
+$xx-small: 10px;
+
+$breakpoints: (
+  'small': (max-width: 576px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 992px),
+  'huge': (min-width: 1200px),
+);
